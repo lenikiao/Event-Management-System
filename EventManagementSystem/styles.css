@@ -1,0 +1,141 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: colorShift 15s infinite alternate;
+}
+.btn{
+    padding: 10px 0;
+    background-color: blue;
+    text-decoration: none;
+    align-items: center; 
+    border: black;
+}
+form {
+    background-color: #ffffff;
+    padding: 60px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #6f42c1; /* Updated to purple */
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #b6d4fe;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #6f42c1; /* Updated to purple */
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #b6d4fe; /* Consider changing border color if desired */
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #6f42c1; /* Updated to purple */
+    outline: none;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #6f42c1; /* Updated to purple */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    animation: popIn 1.0s ease forwards;
+}
+
+input[type="submit"]:hover {
+    background-color: #542c85; /* Darker purple for hover effect */
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.5);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes colorShift {
+    0%, 100% {
+        background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    }
+    50% {
+        background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    }
+}
+
+br {
+    display: none; /* Remove line breaks to apply flex styling */
+}
